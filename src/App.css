@@ -1,0 +1,15 @@
+#footer{
+  position:static;
+  bottom:0px;
+  width:100%;
+}
+
+#body{
+  /* height: 100vh; */
+  margin-bottom: 0;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+} 
