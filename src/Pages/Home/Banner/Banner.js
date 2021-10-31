@@ -19,7 +19,6 @@ const Banner = () => {
                             alt="First slide"
                         />
                         <h1 className="center text-danger fw-bold">The Lind Boracay</h1>
-                        <p className="center-p text-dark fw-bold">Book your favourite resorts from anywhere.</p>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -30,7 +29,6 @@ const Banner = () => {
                             alt="Second slide"
                         />
                         <h1 className="center text-danger fw-bold">SereneStay Resort</h1>
-                        <p className="center-p text-dark fw-bold">Book your favourite resorts from anywhere.</p>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -41,7 +39,6 @@ const Banner = () => {
                             alt="Third slide"
                         />
                         <h1 className="center text-danger fw-bold">Harborview Resort</h1>
-                        <p className="center-p text-dark fw-bold">Book your favourite resorts from anywhere.</p>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,7 +49,6 @@ const Banner = () => {
                             alt="Fourth slide"
                         />
                         <h1 className="center text-danger fw-bold">Night In Paradise</h1>
-                        <p className="center-p text-dark fw-bold">Book your favourite resorts from anywhere.</p>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -63,7 +59,6 @@ const Banner = () => {
                             alt="Fifth slide"
                         />
                         <h1 className="center text-danger fw-bold">Paradise Inn</h1>
-                        <p className="center-p text-dark fw-bold">Book your favourite resorts from anywhere.</p>
                     </div>
                 </Carousel.Item>
             </Carousel>
