@@ -44,38 +44,36 @@ const ManageOrders = () => {
 
     return (
         <div>
-            <div>
-                <h2 className="my-5 d-flex justify-content-center">Order Lists for {user?.displayName}</h2>
-                <ul>
-                    {
-                        usersSingle.map(item => <div
-                            key={item._id}>
-                            {/* <h1 className="my-5 d-flex justify-content-center text-danger">{item.name}</h1> */}
-                            <div className="card mb-5 container card-style">
-                                <div className="row g-0 mb-3">
-                                    <div className="col-md-4">
-                                        <img className="mt-3 img-fluid" src={item.img} alt="..." />
-                                        <br />
-                                        <div className="d-flex justify-content-between">
-                                            <button className="btn btn-warning mt-5" onClick={() => handleDeleteUser(item._id)}>Delete Order</button>
-                                        </div>
+            <h2 className="my-5 d-flex justify-content-center">Order Lists for {user?.displayName}</h2>
+            <ul>
+                {
+                    usersSingle.map(item => <div
+                        key={item._id}>
+                        {/* <h1 className="my-5 d-flex justify-content-center text-danger">{item.name}</h1> */}
+                        <div className="me-4 card mb-5 card-style">
+                            <div className="row g-0 mb-3">
+                                <div className="col-md-4">
+                                    <img className="mt-3 img-fluid" src={item.img} alt="..." />
+                                    <br />
+                                    <div className="d-flex justify-content-between">
+                                        <button className="btn btn-warning mt-5 ms-3" onClick={() => handleDeleteUser(item._id)}>Delete Order</button>
                                     </div>
-                                    <div className="col-md-8">
-                                        <div className="card-body">
-                                            <p className="card-text"><strong>Resort Name: </strong>{item.name}</p>
-                                            <p className="card-text"><strong>Description:</strong> {item.description}</p>
-                                            <p className="card-text"><strong>Country:</strong> {item.careTeam}</p>
-                                            <p className="card-text"><strong>Address:</strong> {item.address}</p>
-                                            <p className="card-text"><strong>No. of Travellers:</strong> {item.travellers}</p>
-                                            <h3>Charge: {item.cost}</h3>
-                                        </div>
+                                </div>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <p className="card-text"><strong>Resort Name: </strong>{item.name}</p>
+                                        <p className="card-text"><strong>Description:</strong> {item.description}</p>
+                                        <p className="card-text"><strong>Country:</strong> {item.careTeam}</p>
+                                        <p className="card-text"><strong>Address:</strong> {item.address}</p>
+                                        <p className="card-text"><strong>No. of Travellers:</strong> {item.travellers}</p>
+                                        <h3>Charge: {item.cost}</h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>)
-                    }
-                </ul>
-            </div>
+                        </div>
+                    </div>)
+                }
+            </ul>
         </div>
     );
 };

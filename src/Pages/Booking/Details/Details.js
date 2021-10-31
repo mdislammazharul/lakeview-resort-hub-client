@@ -36,7 +36,7 @@ const Details = (props) => {
     const userName = user?.displayName;
 
     return (
-        <div>
+        <div className="w-fluid">
             <h1 className="my-5 d-flex justify-content-center text-danger">{name}</h1>
             <div className="card mb-5 container card-style">
                 <div className="row g-0 mb-3">
@@ -57,7 +57,7 @@ const Details = (props) => {
                             <p className="card-text"><strong>Description:</strong> {description}</p>
                             <p className="card-text"><strong>Country:</strong> {careTeam}</p>
                             <h3 className="mb-3">Charge: {cost}</h3>
-                            <form className="d-flex">
+                            <form className="d-flex flex-column">
                                 <div>
                                     <p className="card-text"><strong>Address:</strong></p>
                                     <input className="mb-3 me-5" type="text" ref={addressRef} />

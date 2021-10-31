@@ -50,13 +50,13 @@ const ManageAllOrders = () => {
                     {
                         users.map(item => <div
                             key={item._id}>
-                            <div className="card mb-5 container card-style">
+                            <div className="card mb-5 me-4 card-style">
                                 <div className="row g-0 mb-3">
                                     <div className="col-md-4">
                                         <img className="mt-3 img-fluid" src={item.img} alt="..." />
                                         <br />
                                         <div className="d-flex justify-content-between">
-                                            <button className="btn btn-warning mt-5" onClick={() => handleDeleteUser(item._id)}>Delete Order</button>
+                                            <button className="btn btn-warning mt-5 ms-3" onClick={() => handleDeleteUser(item._id)}>Delete Order</button>
                                         </div>
                                     </div>
                                     <div className="col-md-8">
