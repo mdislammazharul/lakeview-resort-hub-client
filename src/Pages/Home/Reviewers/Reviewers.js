@@ -1,7 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Spinner } from 'react-bootstrap';
+
+let spinner = true;
 
 const Reviewers = () => {
     const [services, setServices] = useState([])
@@ -9,7 +11,15 @@ const Reviewers = () => {
         fetch('https://scary-wizard-25137.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setServices(data));
+        if (services) {
+            spinner = false;
+        }
     }, []);
+
+    if (spinner) {
+        return <div className="d-flex justify-content-center my-3"><Spinner animation="border" variant="danger" /></div>
+    }
+
     return (
         <div id="reviewers">
             <div className="row mx-5 mb-5">

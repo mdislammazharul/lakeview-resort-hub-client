@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+
+let spinner = true;
 
 const ManageAllOrders = () => {
 
@@ -8,7 +11,14 @@ const ManageAllOrders = () => {
         fetch('https://scary-wizard-25137.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setUsers(data))
+        if (users) {
+            spinner = false;
+        }
     }, [])
+
+    if (spinner) {
+        return <div className="d-flex justify-content-center my-3"><Spinner animation="border" variant="danger" /></div>
+    }
 
     // delete an user
     const handleDeleteUser = id => {

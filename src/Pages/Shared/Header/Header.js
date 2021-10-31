@@ -39,23 +39,12 @@ const Header = () => {
                                 </ul>
                             </div>
                         }
-                        {/* <div class="btn-group me-3">
-                            <button type="button" class="btn btn-danger"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/home#home">Admin</NavHashLink></button>
-                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><HashLink className="dropdown-item" to="/manageAllOrders">Manage All Orders</HashLink></li>
-                                <li><HashLink className="dropdown-item" to="/addServices">Add New Services</HashLink></li>
-                            </ul>
-                        </div> */}
                         {user?.displayName && <Navbar.Text>
                             Signed in as: <a className="me-3" href="#login">{user?.displayName}</a>
                         </Navbar.Text>}
                         {
                             user?.displayName ?
                                 <button onClick={logOut} className="btn btn-light">LogOut</button> :
-                                // <HashLink to="/login">Login</HashLink>
                                 <button type="button" class="btn btn-warning"> <NavHashLink style={{ color: 'dark' }} activeStyle={{ color: 'dark' }} to="/login">Login</NavHashLink></button>
                         }
                     </Navbar.Collapse >

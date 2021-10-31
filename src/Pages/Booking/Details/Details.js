@@ -54,12 +54,6 @@ const Details = (props) => {
                         <div className="card-body">
                             <p className="card-text">{description}</p>
                             <p className="card-text"><strong>Country:</strong> {careTeam}</p>
-                            {/* <div className="mb-3">
-                                <form action="/action_page.php">
-                                    <label for="birthdaytime" className="me-3"><strong>Booking Schedule:</strong> </label>
-                                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
-                                </form>
-                            </div> */}
                             <h3 className="mb-3">Charge: {cost}</h3>
                             <form className="d-flex">
                                 <div>

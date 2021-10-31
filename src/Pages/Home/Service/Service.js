@@ -6,6 +6,7 @@ import './Service.css';
 const Service = ({ service }) => {
     // const {service} = props;
     const { id, name, careTeam, description, img } = service;
+
     // console.log(service);
     return (
         <div id="services" className="service my-3 col-12 col-lg-4">
