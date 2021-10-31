@@ -52,7 +52,9 @@ const Details = (props) => {
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <p className="card-text">{description}</p>
+                            <p className="card-text"><strong>User Name:</strong> {user?.displayName}</p>
+                            <p className="card-text"><strong>User Email:</strong> {user?.email}</p>
+                            <p className="card-text"><strong>Description:</strong> {description}</p>
                             <p className="card-text"><strong>Country:</strong> {careTeam}</p>
                             <h3 className="mb-3">Charge: {cost}</h3>
                             <form className="d-flex">

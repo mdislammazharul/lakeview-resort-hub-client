@@ -48,7 +48,6 @@ const ManageAllOrders = () => {
                 {
                     users.map(item => <div
                         key={item._id}>
-                        {/* <h1 className="my-5 d-flex justify-content-center text-danger">{item.name}</h1> */}
                         <div className="card mb-5 container card-style">
                             <div className="row g-0 mb-3">
                                 <div className="col-md-4">

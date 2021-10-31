@@ -1,21 +1,23 @@
-# MetLife Health Care
+# Lake View Resort Hub
 
-'MetLife Health Care' is a simple react based website for consulting a medical doctor or ensuring modern medical services with cutting edge technology.
+'Lake View Resort Hub' is a simple react and mongoDB based website for choosing best resort from anywhere in the world.
 
 ## Live Link
 
 Use the link to open the Live Site of this project.
-[MetLife Health Care](https://metlife-health-care.web.app)
+[Lake View Resort Hub](https://lake-view-resort-hub.web.app)
 
 ```bash
-https://metlife-health-care.web.app
+https://lake-view-resort-hub.web.app
 ```
 
 ## About the Site
 * The site uses React Library for building user interfaces and UI components.
 * This site hase some private route. To access these page, you need to login first.
 * The login system here is implemented by Firebase Authentication.
-* One can sign up here using his/her Gmail Account or GitHub Account.
+* This site has mongoDB connection for server side.
+* Used Heroku for server deployment and firebase for client side deployment.
+* One can sign up here using his/her Gmail Account.
 * Used Bootstrap as CSS framework.
 * Used Fontawesome for icons.
 * Moreover Custom Hooks, Context API and useAuth is used in this site. 
