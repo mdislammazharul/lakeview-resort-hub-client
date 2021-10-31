@@ -17,33 +17,31 @@ const AddServices = () => {
         const description = descriptionRef.current.value;
         const cost = costRef.current.value;
 
-        const newUser = { id, name, careTeam, description, img, cost };
-        fetch('http://localhost:5000/services', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newUser)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    alert('User added Successfully.')
-                    e.target.reset();
-                }
+        if (id !== "null" && name !== "" && careTeam !== "" && description !== "" && img !== "" && cost !== "") {
+            const newUser = { id, name, careTeam, description, img, cost };
+            fetch('https://scary-wizard-25137.herokuapp.com/services', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newUser)
             })
-        e.preventDefault();
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        alert('User added Successfully.')
+                        e.target.reset();
+                    }
+                })
+            e.preventDefault();
+        }
+        else {
+            alert('Please Fill All the Information')
+        }
+
     }
     return (
-        <div className="w-50 d-flex justify-content-center">
-            {/* <h2>Please Add an user</h2> */}
-            {/* <form onSubmit={handleAddUser}>
-                <input type="text" ref={nameRef} />
-                <input type="text" ref={imgRef} />
-                <input type="text" ref={countryRef} />
-                <textarea row="4" cols="50" ref={descriptionRef} />
-                <input type="submit" value="Add" />
-            </form> */}
+        <div className="m-5 d-flex justify-content-center">
             <form onSubmit={handleAddUser}>
                 <div class="mb-3">
                     <label for="exampleInputText" class="form-label">Service ID (only integer numbers)</label>
@@ -62,17 +60,14 @@ const AddServices = () => {
                     <input type="text" class="form-control" id="exampleInputText" ref={careTeamRef} />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputText" class="form-label">Service Country</label>
+                    <label for="exampleInputText" class="form-label">Service Cost</label>
                     <input type="text" class="form-control" id="exampleInputText" ref={costRef} />
                 </div>
-                {/* <div>
-                    <textarea row="4" cols="50" ref={descriptionRef} />
-                </div> */}
                 <div class="form-group">
                     <label for="exampleFormControlTextarea3">Service Description</label>
                     <textarea cols="50" class="form-control" id="exampleFormControlTextarea3" rows="7" ref={descriptionRef}></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="my-4 btn btn-primary">Submit</button>
             </form>
         </div>
     );

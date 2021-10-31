@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap';
 const FAQ = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/faq')
+        fetch('https://scary-wizard-25137.herokuapp.com/faq')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);

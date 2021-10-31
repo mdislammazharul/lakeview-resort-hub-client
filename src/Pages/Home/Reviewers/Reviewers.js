@@ -6,7 +6,7 @@ import { Card } from 'react-bootstrap';
 const Reviewers = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://scary-wizard-25137.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);

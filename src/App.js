@@ -11,6 +11,7 @@ import Booking from './Pages/Booking/Booking/Booking';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import AddServices from './Pages/AddServices/AddServices';
+import ContactUs from './Pages/Home/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
               </PrivateRoute>
               <Route exact path="/login">
                 <Login></Login>
+              </Route>
+              <Route exact path="/contactUs">
+                <ContactUs></ContactUs>
               </Route>
               <PrivateRoute exact path="/addServices">
                 <AddServices></AddServices>

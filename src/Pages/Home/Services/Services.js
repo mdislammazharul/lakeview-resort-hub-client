@@ -4,11 +4,10 @@ import Service from '../Service/Service';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://scary-wizard-25137.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
-
     return (
         <div className="mx-5">
             <h1 className="text-danger mt-5 text-center mb-5 display-2">Resort Services</h1>

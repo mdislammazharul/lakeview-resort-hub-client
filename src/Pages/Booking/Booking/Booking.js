@@ -7,7 +7,7 @@ const Booking = () => {
     const id = parseInt(serviceId);
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://scary-wizard-25137.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);

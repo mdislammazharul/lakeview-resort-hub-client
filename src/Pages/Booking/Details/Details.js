@@ -14,7 +14,7 @@ const Details = (props) => {
         const travellers = travellersRef.current.value;
 
         const newUser = { name, address, travellers, description, img, cost, careTeam, userEmail, userName };
-        fetch('http://localhost:5000/orders', {
+        fetch('https://scary-wizard-25137.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

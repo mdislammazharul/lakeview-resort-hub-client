@@ -26,8 +26,20 @@ const Header = () => {
                         </div>
                         <button type="button" class="btn btn-danger me-3"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/home#services">Services</NavHashLink></button>
                         <button type="button" class="btn btn-danger me-3"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/manageOrders">My Orders</NavHashLink></button>
-                        <button type="button" class="btn btn-danger me-3"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/live">Blank</NavHashLink></button>
-                        <div class="btn-group me-3">
+                        <button type="button" class="btn btn-danger me-3"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/contactUs">Contact Us</NavHashLink></button>
+                        {
+                            user?.displayName && <div class="btn-group me-3">
+                                <button type="button" class="btn btn-danger"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/home#home">Admin</NavHashLink></button>
+                                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><HashLink className="dropdown-item" to="/manageAllOrders">Manage All Orders</HashLink></li>
+                                    <li><HashLink className="dropdown-item" to="/addServices">Add New Services</HashLink></li>
+                                </ul>
+                            </div>
+                        }
+                        {/* <div class="btn-group me-3">
                             <button type="button" class="btn btn-danger"> <NavHashLink style={{ color: 'white' }} activeStyle={{ color: 'white' }} to="/home#home">Admin</NavHashLink></button>
                             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -36,7 +48,7 @@ const Header = () => {
                                 <li><HashLink className="dropdown-item" to="/manageAllOrders">Manage All Orders</HashLink></li>
                                 <li><HashLink className="dropdown-item" to="/addServices">Add New Services</HashLink></li>
                             </ul>
-                        </div>
+                        </div> */}
                         {user?.displayName && <Navbar.Text>
                             Signed in as: <a className="me-3" href="#login">{user?.displayName}</a>
                         </Navbar.Text>}
